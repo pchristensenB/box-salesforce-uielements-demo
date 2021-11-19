@@ -74,3 +74,4 @@ typings/
 
 # FuseBox cache
 .fusebox/
+force-app/main/default/classes/BoxConnection.cls
