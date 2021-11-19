@@ -1,0 +1,12 @@
+<aura:component controller="BoxMetadataQueryViewController" implements="force:hasRecordId,force:hasSObjectName,force:appHostable,flexipage:availableForAllPageTypes,forceCommunity:availableForAllPageTypes, lightning:availableForFlowScreens">
+<aura:attribute name="logoUrl" type="string" default="{!$Resource.logos + '/box-logo.png'}" />
+<aura:attribute name="folderId" type="String" access = "global" />
+<aura:attribute name="recordId" type="String" access = "global" />
+<aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+<ltng:require 
+        styles="{!$Resource.explorer + '/13.0.0/en-US/explorer.css'}"
+        scripts="{!$Resource.explorer + '/13.0.0/en-US/explorer.js'}" 
+        afterScriptsLoaded="{!c.doInit}"/>
+        <div aura:id="explorer-container2"> hellow</div>
+
+</aura:component>

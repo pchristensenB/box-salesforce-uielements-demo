@@ -1,0 +1,9 @@
+<aura:component controller="BoxContentExplorerController" implements="force:hasSObjectName,force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes, lightning:availableForFlowScreens">
+<aura:attribute name="logoUrl" type="string" default="{!$Resource.logos + '/box-logo.png'}" />
+<aura:attribute name="folderId" type="String" access = "global" />
+<ltng:require 
+        styles="{!$Resource.uploader + '/13.0.0/en-US/uploader.css'}"
+        scripts="{!$Resource.uploader + '/13.0.0/en-US/uploader.js'}" 
+        afterScriptsLoaded="{!c.doInit}"/>
+        <div aura:id="uploader-container"> </div>
+</aura:component>	

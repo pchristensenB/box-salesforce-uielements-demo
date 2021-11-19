@@ -1,0 +1,4 @@
+<design:component label="Box Content Explorer">
+    <design:attribute name = "folderId" label= "Folder Id" />
+
+</design:component>

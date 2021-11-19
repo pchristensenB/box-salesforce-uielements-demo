@@ -1,0 +1,10 @@
+<aura:component controller="BoxContentExplorerStandaloneController" implements="force:hasSObjectName,force:appHostable,flexipage:availableForAllPageTypes,forceCommunity:availableForAllPageTypes">
+<aura:attribute name="logoUrl" type="string" default="{!$Resource.logos + '/box-logo.png'}" />
+<aura:attribute name="folderId" type="String" access = "global" />
+<ltng:require 
+        styles="{!$Resource.explorer + '/13.0.0/en-US/explorer.css'}"
+        scripts="{!$Resource.explorer + '/13.0.0/en-US/explorer.js'}" 
+        afterScriptsLoaded="{!c.doInit}"/>
+        <div aura:id="explorer-container1"> Peter</div>
+
+</aura:component>	

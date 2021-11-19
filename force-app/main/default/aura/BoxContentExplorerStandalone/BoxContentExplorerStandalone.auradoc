@@ -1,0 +1,6 @@
+<aura:documentation>
+	<aura:description>RootDocumentation</aura:description>
+	<aura:example name="RootExampleName" ref="rootExampleComponentName" label="Label">
+		Root Example Description
+	</aura:example>
+</aura:documentation>

@@ -1,0 +1,5 @@
+<design:component label="Box Metadata Query View2">
+    <design:attribute name = "folderId" label= "Folder Id" />
+    <design:attribute name = "recordId" label= "Record Id" />
+
+</design:component>
