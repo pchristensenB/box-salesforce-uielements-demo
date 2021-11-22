@@ -86,7 +86,7 @@ String clientSecret = '';
 ## Setting up Box with Community
 Now you can setup your community and use the Box UI Components in your Builder
 
-![Preview Box Content Explorer](/images/10-box-cors-configuration.png)
+![Preview Box Content Explorer](/images/12-components.png)
 
 
 
