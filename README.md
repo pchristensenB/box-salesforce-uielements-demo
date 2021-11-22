@@ -83,9 +83,14 @@ String clientId = '';
 String clientSecret = '';
 ```
 
-## Setting up with Community
-Now you can setup your community and load Box folders into the UI element. Please note that the first time you load the UI element it will likely fail with a CORS error. You need to add the site of your community to the CORS exceptions in the Box application configuration and the URLs used by the builder. 
+## Setting up Box with Community
+Now you can setup your community and use the Box UI Components in your Builder
+![Components] (/Screenshot 2021-11-22 at 13.10.14.png)
+
+Please note that the first time you load the UI element it will likely fail with a CORS error. You need to add the site of your community to the CORS exceptions in the Box application configuration and the URLs used by the builder. 
 
 ![Preview Box Content Explorer](/images/10-box-cors-configuration.png)
+
+
 
 
