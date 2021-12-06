@@ -85,6 +85,7 @@ String clientSecret = '';
 
 ## Setting up Box with Community
 Now you can setup your community and use the Box UI Components in your Builder. 
+
 ![Preview Box Content Explorer](/images/12-components.png)
 
 The Box Content Explorer component is related to a specific Salesforce record and will show the Box folder related to a record
