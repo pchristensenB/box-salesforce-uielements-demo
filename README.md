@@ -96,7 +96,8 @@ The Box Content Explorer Standalone component takes a folder ID at design time a
 The Box Content Uploader component can take a folder Id at design time and display an upload UI component for the given folder.
 ![Preview Box Content Explorer](/images/15-uploader.png)
 
-
+The Box Preview component can take a document ID at design time and display the preview of the document
+![Box Preview](/images/16-preview.png)
 
 
 
