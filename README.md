@@ -1,5 +1,5 @@
-# Box for Salesforce Community example code
-Box for Salesforce Blueprints is an examples designed to demonstrate how to load Box content related to a Salesforce record into a Box UI ELement in Salesforce Communities
+# Box Salesforce Communities demo with UI Elements
+This sample is designed to give developers a head start in setting up a Salesforce Community that can use Box UI Elements to integrate with Box Content Services.
 
 
 ## Pre-Requisites
@@ -83,8 +83,22 @@ String clientId = '';
 String clientSecret = '';
 ```
 
+## Whats in the Box
+The force app you have installed has a number of components that can be used to integrate Box and Salesforce Communities.
+- Ligtening Components
+    These are Aura components and each represent a Custom Component that can be used in the Salesforce Digital Experience builder
+
+- Apex Classes
+    The Apex classes are the controller classes for the above components and classes for the apex triggers to handle account and portal user creation
+ 
+- Static Resources
+    The static resources are the javascript and stylesheet files that are required for UI elements. These must be added here as static resources as the Salesforce Community security posture doesn't allow loading of external libraries.
+
+- Apex Triggers
+
+
 ## Setting up Box with Community
-Now you can setup your community and use the Box UI Components in your Builder. 
+Now you can setup your community and use the Box UI Elements in your Builder. For this sample there are four seperate elements exposed as Custom Lightening Components.
 
 ![Preview Box Content Explorer](/images/12-components.png)
 
