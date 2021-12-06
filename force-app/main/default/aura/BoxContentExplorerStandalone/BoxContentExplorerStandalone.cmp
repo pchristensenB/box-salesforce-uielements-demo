@@ -1,4 +1,4 @@
-<aura:component controller="BoxContentExplorerStandaloneController" implements="force:hasSObjectName,force:appHostable,flexipage:availableForAllPageTypes,forceCommunity:availableForAllPageTypes">
+<aura:component controller="BoxContentExplorerStandaloneController" implements="force:hasSObjectName,force:appHostable,flexipage:availableForAllPageTypes,forceCommunity:availableForAllPageTypes,lightning:availableForFlowScreens">
 <aura:attribute name="logoUrl" type="string" default="{!$Resource.logos + '/box-logo.png'}" />
 <aura:attribute name="folderId" type="String" access = "global" />
 <ltng:require 

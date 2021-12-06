@@ -1,4 +1,4 @@
-<design:component label="Box Content Explorer Stanndalone">
+<design:component label="Box Content Explorer Standalone">
     <design:attribute name = "folderId" label= "Folder Id" />
 
 </design:component>
