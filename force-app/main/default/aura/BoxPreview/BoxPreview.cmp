@@ -1,0 +1,9 @@
+<aura:component controller="BoxPreviewController" implements="force:hasSObjectName,force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes, lightning:availableForFlowScreens">
+<aura:attribute name="logoUrl" type="string" default="{!$Resource.logos + '/box-logo.png'}" />
+<aura:attribute name="documentId" type="String" access = "global" />
+<ltng:require 
+        styles="{!$Resource.preview + '/2.6.1/en-US/preview.css'}"
+        scripts="{!$Resource.preview + '/2.6.1/en-US/preview.js'}" 
+        afterScriptsLoaded="{!c.doInit}"/>
+        <div aura:id="preview-container"> </div>
+</aura:component>	

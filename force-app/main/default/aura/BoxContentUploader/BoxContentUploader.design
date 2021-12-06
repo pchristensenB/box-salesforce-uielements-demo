@@ -1,4 +1,4 @@
-<design:component label="Box Content Explorer">
+<design:component label="Box Content Uploader">
     <design:attribute name = "folderId" label= "Folder Id" />
 
 </design:component>

@@ -1,0 +1,4 @@
+<design:component label="Box Preview">
+    <design:attribute name = "documentId" label= "Document Id" />
+
+</design:component>

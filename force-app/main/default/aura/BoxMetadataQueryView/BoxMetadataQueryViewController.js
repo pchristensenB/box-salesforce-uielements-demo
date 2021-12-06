@@ -18,18 +18,18 @@
                 var explorer = new Box.ContentExplorer();
                 var explorerContainer = component.find("explorer-container2").getElement();
 				const fields =[
-                	"metadata.enterprise_842457693.epqsFiles.fileType"
+                	"metadata.enterprise_123456.templateKey.fieldKey"
                     
                 ];
                  const fieldsToShow = [
 
-			        { key: "metadata.enterprise_842457693.epqsFiles.fileType", canEdit: true }
+			        { key: "metadata.enterprise_123456.templateKey.fieldKey", canEdit: true }
         
                 ];
-				const query ="fileType  is null";
-				const query_params={"arg1":"Bonkers"};
+				const query ="fieldKey  is null";
+				const query_params={"arg1":"Arggh"};
 				const mdQuery = {
-					from: "enterprise_842457693.epqsFiles",
+					from: "enterprise_123456.templateKey",
 					query: query,
 					limit: 20,
 					query_params: query_params,
