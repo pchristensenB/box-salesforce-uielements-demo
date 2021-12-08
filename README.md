@@ -1,8 +1,8 @@
 # Box Salesforce Communities demo with UI Elements
 This sample is designed to give developers a head start in setting up a Salesforce Community that can use Box UI Elements to integrate with Box Content Services.
 
-
 ## Pre-Requisites
+## Salesforce Setup
 
 1. Clone this github repo.
 2. Setup your Salesforce DX environment: https://trailhead.salesforce.com/en/content/learn/projects/quick-start-salesforce-dx/set-up-your-salesforce-dx-environment
@@ -16,17 +16,19 @@ This sample is designed to give developers a head start in setting up a Salesfor
     * Production/Developer Org: https://cloud.box.com/Box-Apex-SDK
     * Sandbox Org: https://cloud.box.com/Box-Apex-SDK-Sandbox
 
-7. Open the source from this repo in VS Code.
-8. In VS Code, use the cmd+shift+p shortcut and select SFDX: Authorize Org
-9. Confirm you've successfully authorized your org by listing orgs and their associated status:
+
+## VS Code setup
+1. Open the source from this repo in VS Code.
+2. In VS Code, use the cmd+shift+p shortcut and select SFDX: Authorize Org
+3. Confirm you've successfully authorized your org by listing orgs and their associated status:
 ```
 sfdx force:org:list
 ```
-10. List the installed packaged for your org:
+4. List the installed packaged for your org:
 ```
 sfdx force:package:installed:list -u <username@domain.com>
 ```
-11. Locate the Box for Salesforce package and copy the PACKAGE ID and VERSION into a new dependencies json element of the sfdx-project.json located at the root project directory.
+Locate the Box for Salesforce package and copy the PACKAGE ID and VERSION into a new dependencies json element of the sfdx-project.json located at the root project directory.
 
 It should looks something like this:
 ```
@@ -52,7 +54,26 @@ It should looks something like this:
   ]
 }
 ```
-13. Deploy you project source to either you scratch org or developer org in the next section.
+## Box Application setup
+
+Next you need to create a Box JWT application using this guide: https://developer.box.com/guides/authentication/jwt/jwt-setup/
+
+Once you have downloaded the json config file with your private key run the below command from the scripts directory
+./parse_box_config.py /path/to/your/config/json/file
+
+This should output a correctly formatted private key in a file 'sfdc_box_config.json' in the scripts directory
+
+Next, you need to copy the values from the json file into the BoxConnection Apex class
+```
+String publicKeyId = '';
+String privateKey = '';
+String enterpriseId = '';
+String clientId = '';
+String clientSecret = '';
+```
+
+## Deploying the app
+Deploy you project source to either you scratch org or developer org in the next section.
 
 ## Deploy to your Org
 Push to Scratch Org:
@@ -66,24 +87,7 @@ Deploy to Developer/Production Org:
 sfdx force:source:deploy -p force-app -u username@company.com
 ```
 
-## Create a Box JWT App
-https://developer.box.com/guides/authentication/jwt/jwt-setup/
-
-Once you have downloaded the json config file with your private key run the below command from the scripts directory
-./parse_box_config.py /path/to/your/config/json/file
-
-This should output a correctly formatted private key in a file 'sfdc_box_config.json' in the scripts directory
-
-Next, you need to copy the values from the json file into the BoxConnection class
-```
-String publicKeyId = '';
-String privateKey = '';
-String enterpriseId = '';
-String clientId = '';
-String clientSecret = '';
-```
-
-## Whats in the Box
+## Whats in the application
 The force app you have installed has a number of components that can be used to integrate Box and Salesforce Communities.
 - Ligtning Components
     These are Aura components and each represent a Custom Component that can be used in the Salesforce Digital Experience builder. Each component has a corresponding Apex controller class that manages the token generation.
@@ -102,7 +106,7 @@ The force app you have installed has a number of components that can be used to 
     The static resources are the javascript and stylesheet files that are required for UI elements. These must be added here as static resources as the Salesforce Community security posture doesn't allow loading of external libraries. These resources are referenced in the Component resource files (.cmp)
     ![STATIC](/images/20-static.png)
     ..in the CMP File
-    ![CMP](/images/21-cmp.png)
+    ![CMP](/images/22-cmp.png)
 
 
 - Apex Triggers
@@ -111,25 +115,24 @@ The force app you have installed has a number of components that can be used to 
     - Opportunity trigger. Creates a Box folder automatically when a new opportunity is created and moves under the account associated
     - App user trigger. Creates a Box app user when a new portal user registeres. See [APP](appuser.md)
 
-
+    ![TRIGGER](/images/21-triggers.png)
 
 ## Setting up Box with Community
-Now you can setup your community and use the Box UI Elements in your Builder. For this sample there are four seperate elements exposed as Custom Lightening Components.
+Now you can build your community site and use the Box UI Elements in your Builder. For this sample there are four seperate elements exposed as Custom Lightening Components.
 
 ![Preview Box Content Explorer](/images/12-components.png)
 
-The Box Content Explorer component is related to a specific Salesforce record and will show the Box folder related to a record
+The Box Content Explorer component is related to a specific Salesforce record and will show the Box folder related to a record. To work this needs to be included on a record detail page
 ![Preview Box Content Explorer](/images/13-record.png)
 
-The Box Content Explorer Standalone component takes a folder ID at design time and will show the contents of this folder or folder '0' if nothing is given
+The Box Content Explorer Standalone component takes a folder ID at design time and will show the contents of this folder or folder '0' if nothing is given. This can be included anywhere in your site
 ![Preview Box Content Explorer](/images/14-standalone.png)
 
-The Box Content Uploader component can take a folder Id at design time and display an upload UI component for the given folder.
+The Box Content Uploader component can take a folder Id at design time and display an upload UI component for the given folder. This can be included anywhere in your site
 ![Preview Box Content Explorer](/images/15-uploader.png)
 
-The Box Preview component can take a document ID at design time and display the preview of the document
+The Box Preview component can take a document ID at design time and display the preview of the document. This can be included anywhere in your site
 ![Box Preview](/images/16-preview.png)
-
 
 
 
