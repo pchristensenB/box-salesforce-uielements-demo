@@ -76,13 +76,12 @@ String clientSecret = '';
 ## Deploying the app
 Deploy you project source to either you scratch org or developer org in the next section.
 
-### Deploy to your Org
 Push to Scratch Org:
 ```
 sfdx force:source:push
 ```
 
-### Deploy to Developer/Production Org:
+Push to Developer/Production Org:
 You can right click the "force-app" folder and select "SFDX: Deploy source to Org"
 
 ![Deploy](/images/23-deploy.png)
@@ -116,6 +115,7 @@ The force app you have installed has a number of components that can be used to 
     ![STATIC](/images/20-static.png)
 
     ..in the CMP File
+
     ![CMP](/images/22-cmp.png)
 
 
