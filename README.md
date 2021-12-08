@@ -85,14 +85,14 @@ String clientSecret = '';
 
 ## Whats in the Box
 The force app you have installed has a number of components that can be used to integrate Box and Salesforce Communities.
-- Ligtening Components
-    These are Aura components and each represent a Custom Component that can be used in the Salesforce Digital Experience builder
+- Ligtning Components
+    These are Aura components and each represent a Custom Component that can be used in the Salesforce Digital Experience builder. Each component has a corresponding Apex controller class that manages the token generation.
 
 - Apex Classes
-    The Apex classes are the controller classes for the above components and classes for the apex triggers to handle account and portal user creation
+    The Apex classes are the controller classes for the above components and classes for the apex triggers to handle account and portal user creation.
  
 - Static Resources
-    The static resources are the javascript and stylesheet files that are required for UI elements. These must be added here as static resources as the Salesforce Community security posture doesn't allow loading of external libraries.
+    The static resources are the javascript and stylesheet files that are required for UI elements. These must be added here as static resources as the Salesforce Community security posture doesn't allow loading of external libraries. These resources are referenced in the Component resource files (.cmp)
 
 - Apex Triggers
 
