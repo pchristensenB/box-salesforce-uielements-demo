@@ -117,7 +117,7 @@ The force app you have installed has a number of components that can be used to 
     - Opportunity trigger. Creates a Box folder automatically when a new opportunity is created and moves under the account associated
     - App user trigger. Creates a Box app user when a new portal user registeres. See [APP](appuser.md)
 
-    ![TRIGGER](/images/22-triggers.png)
+    ![TRIGGER](/images/21-triggers.png)
 
 
 ## Setting up Box with Community
