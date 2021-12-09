@@ -76,3 +76,5 @@ typings/
 .fusebox/
 force-app/main/default/classes/BoxConnection.cls
 sfdc_box_config.json
+
+.sfdx

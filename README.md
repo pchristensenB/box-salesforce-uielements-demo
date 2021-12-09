@@ -4,7 +4,7 @@ This sample is designed to give developers a head start in setting up a Salesfor
 ## Pre-Requisites
 ## Salesforce Setup
 
-If you are working with other developers in a shared environment you can do these two steps - if you are on your own developer instance you can skip to step 3
+If you are working with other developers in a shared environment you can do the first two steps - if you are on your own developer instance you can skip to step 3
 
 1. Setup your Salesforce DX environment: https://trailhead.salesforce.com/en/content/learn/projects/quick-start-salesforce-dx/set-up-your-salesforce-dx-environment
 2. Enable Dev Hub in Salesforce. https://help.salesforce.com/s/articleView?id=sf.sfdx_setup_enable_devhub.htm&type=5
