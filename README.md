@@ -1,5 +1,5 @@
 # Box Salesforce Communities demo with UI Elements
-This sample is designed to give developers a head start in setting up a Salesforce Community that can use Box UI Elements to integrate with Box Content Services. Disclainer: This sample code is provided as it without any guarantees or support and is not an 
+This sample is designed to give developers a head start in setting up a Salesforce Community that can use Box UI Elements to integrate with Box Content Services. 
 
 ## Pre-Requisites
 ## Salesforce Setup
