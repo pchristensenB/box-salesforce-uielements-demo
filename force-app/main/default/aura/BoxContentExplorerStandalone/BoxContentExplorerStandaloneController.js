@@ -32,6 +32,7 @@
                     canShare: true,
                     canSetShareAccess: true,
                     staticHost: baseURL,
+                    previewLibraryVersion: '2.12.0',
                     contentPreviewProps: {
                         staticPath: previewResource,
                         previewLibraryVersion: '2.12.0',
