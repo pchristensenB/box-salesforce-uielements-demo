@@ -20,7 +20,7 @@ If you are working with other developers in a shared environment you can do the 
 
 ## VS Code setup
 1. Clone this github repo.
-2. Setup VS Code and Salesforce CLI: https://trailhead.salesforce.com/content/learn/projects/quick-start-lightning-web-components/set-up-visual-studio-code
+2. Setup VS Code and Salesforce CLI: https://trailhead.salesforce.com/content/learn/projects/quick-start-lightning-web-components/set-up-visual-studio-code and https://developer.salesforce.com/tools/sfdxcli
 3. Open the source from this repo in VS Code.
 4. In VS Code, use the cmd+shift+p shortcut and select SFDX: Authorize Org
 5. Confirm you've successfully authorized your org by listing orgs and their associated status:

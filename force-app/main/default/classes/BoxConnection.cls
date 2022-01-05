@@ -17,11 +17,11 @@ public with sharing class BoxConnection {
     private BoxConnection() {
 
 
-             String publicKeyId = 'ifg5grsh';//boxJwtConnection.Public_Key_ID__c;
-            String privateKey = 'MIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQDeDUt4cqE8hLm7l5Zez3Ht8bmb9EDrNziz5JYkLx4kVl+/vIFn5ZUm2n2epadV3A7IoOnLy9kqKLSE/F68jWuDhUsEU4E5vRCYkRqxKeKf1ZKqIAHctYYhPgMP54zBQTmvcIYxrxywW+LiBhbcrYx5FIBDSpjYqSSEbsEosO+3GSOsock+HSNy0jxDcD5KmbTfY0QdnzrQIy6N2hbQHQcgUrAqPoZBza4SEoETwsJHL2kFt3c1+PCOGBEePxwgVjnbZJMWJMuO3+csotDaL13M8uEdXQ2WFf3vviWw5EYiUxQoDaXyFjYcis+nbkyE/ryQuC8OwKg2E6NkvuP6BkRZAgMBAAECggEAN5R0U429tfwy0TW8ObcK+VgL8XFN3pJP6xdITX5NuSK1jLSOX4cjsjn2P4OPQvp16Nn+Kzi2/sp5hN/2hpOPWbg/crHEIsOkJ8wKNlYZl5BJybOBQ9Fb5W40LgLzRFwjKDquHDmMoMgfHhwQFOSLyLLM+Arv/ys3LL7cMmc3WUjGKH0fknKwJeEG4G7giyU8DOgmC+btds+Lq99LIqVIEdhmKYLk2h0ZkN+S5fdftfk9nLhkuaKa7H6LstIqMLdoj4Gn5EUw0gyY2zQFPsOYCWqZU20ty8J+LHy6VZIKYCp0Rv3XgxgHqeS5FUNLizTT8OjtSpfotRf1CUm3Y9ZsQQKBgQD3gL14IpBjcJk6T+36+GBm+fvo8pFFoBE3wHuWBR/TKyFg/1ng9fSJAhKtxiAyspeaP8vSqLD5l0L158onRUbs5sc3++emyrLxN55vLm0HWo1ZZ6AvNcs5kVJqOvlNQQyoVIggRZWQuL6bZjIF/yoaO4bYWxEzR+HWUsStUEAgbQKBgQDlrN7ij89gzbS4RLHgiQESr1d0Uv2U1zmwda4L58KLbVnidTkxbAdH7TYjPn40O7/D8XYDh3x0U0JYTeYtbdsILnJq7ZbEZVTt2FnVLIa93glZjA/fjCvmR+cpmk4aHhAbBvz2VY2mS9ImfZfmqcfpt+8Cn+DYSyIZdSA4Ex34HQKBgQDNrYDGmwKegG31lYLQ8yM5sDh1p06uK4zjZePOEcgWtlrwvoM0fXCPgtd+7YzIVL3Dg4ygLWuUnu0YaV0HMXz1VfrsPTyO0RfPeUcCYfRdDhU03PazBOMznd59RTDz0EDyifztxKW8NKrBfTXI4flc/2bZ2SP8F5pHf1TOKkiAKQKBgQCPQ7YEPRBuoeIIz1DlbpBsx1MWDG6BWX9ywvU+F+MSdbOLvvNeELS5+Q28Dk9K5bpIz2V97hWDuiu4SV87Fzt5bv+QE4PoHg1MD5h5kLy70rSiVuvP1e/MRS28lbQCNp51PXatcdBZ2xHLUKxgBafd8g305SWrxbIPjy/5ynL3QQKBgQCie7XPn55XkkZdVarM0nhQIB94fqE2IxY9HccVjw4Gi1kZ0eoodBKyARugOEJaQ/NugMTwyyw4QE0LDVfYbkHzobKHxMWodqgA9jTmLB3z+KevJBFH2RfDKKYKl/IxgTGi+U+ZeTbzBjA+IKVcC8Hev97aUiDqQWYm/9/rVO/vKg==';//boxJwtConnection.Private_Key__c;
-            String enterpriseId = '47757585';//boxJwtConnection.Enterprise_ID__c;
-            String clientId = 'bn2iyg37p78jkowrp0io0nc2ln0be3wt';//boxJwtConnection.Client_ID__c;
-            String clientSecret = 'C45GViJjUNr3QWvCSXlJAXbbfYBeHyPZ';//;
+             String publicKeyId = '';
+            String privateKey = '';
+            String enterpriseId = '';
+            String clientId = '';
+            String clientSecret = '';
 
 
 		    preferences.setPublicKeyId(publicKeyId);
