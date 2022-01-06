@@ -127,8 +127,8 @@ The Box Preview component can take a document ID at design time and display the 
 Please note that the first time you load the UI element it will likely fail with a CORS error. You need to add the site of your community to the CORS exceptions in the Box application configuration and the URLs used by the builder. There are three sites you need to add
 
 For the builder:
-- https://<your sfdx sub domain>.builder.salesforce-communities.com
-- https://<your sfdx sub domain>.livepreview.salesforce-communities.com
+- https://your sfdx sub domain.builder.salesforce-communities.com
+- https://your sfdx sub domain.livepreview.salesforce-communities.com
 
 For when you have published. Open the digital experiences page in Salesforce and you should see URL(s) there
 ![Preview Box Content Explorer](/images/24-dt.png)
