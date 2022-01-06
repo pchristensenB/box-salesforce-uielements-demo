@@ -20,9 +20,11 @@ If you are working with other developers in a shared environment you can do the 
 
 ## VS Code setup
 1. Clone this github repo.
-2. Setup VS Code and Salesforce CLI: https://trailhead.salesforce.com/content/learn/projects/quick-start-lightning-web-components/set-up-visual-studio-code and https://developer.salesforce.com/tools/sfdxcli
+2. Install Salesforce CLI: https://developer.salesforce.com/tools/sfdxcli
+2. Setup VS Code: https://trailhead.salesforce.com/content/learn/projects/quick-start-lightning-web-components/set-up-visual-studio-code
 3. Open the source from this repo in VS Code by adding the folder to your workspace.
 4. In VS Code, use the cmd+shift+p shortcut and select SFDX: Authorize Org
+   (if you are having issues with the CLI not being found when using VS Code, uninstall the Salesforce extensions and CLI from VS Code and start from step#2)
 5. Confirm you've successfully authorized your org by listing orgs and their associated status:
 ```
 sfdx force:org:list
@@ -65,6 +67,7 @@ Next you need to create a Box JWT application using this guide: https://develope
 Once you have downloaded the json config file with your private key run the below command from the scripts directory
 MAC: ./parse_box_config.py /path/to/your/config/json/file
 Windows: python parse_box_config.py /path/to/your/config/json/file
+(if you don't have 'openssl' installed you can check this article https://stackoverflow.com/questions/50625283/how-to-install-openssl-in-windows-10)
 
 This should output a correctly formatted private key in a file 'sfdc_box_config.json' in the scripts directory
 
