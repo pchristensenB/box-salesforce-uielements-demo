@@ -90,7 +90,6 @@ String clientSecret = '';
 ```
 
 ## Deploying the app
-Deploy you project source to either you scratch org or your own developer instance.
 
 More detail on what is in the app - see [APP DETAILS](app-details.md) - if you already have triggers and other custom code in your org please check against this list to see if you will run into any conflicts.
 
