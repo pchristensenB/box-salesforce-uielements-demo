@@ -71,8 +71,11 @@ Next you need to create a Box JWT application using this guide: https://develope
 (as a minimum the app should Read/Write and "Generate tokens for users")
 
 Once you have downloaded the json config file with your private key run the below command from the scripts directory
+
 MAC: ./parse_box_config.py /path/to/your/config/json/file
+
 Windows: python parse_box_config.py /path/to/your/config/json/file
+
 (if you don't have 'openssl' installed you can check this article https://stackoverflow.com/questions/50625283/how-to-install-openssl-in-windows-10)
 
 This should output a correctly formatted private key in a file 'sfdc_box_config.json' in the scripts directory

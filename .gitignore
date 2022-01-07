@@ -79,3 +79,4 @@ sfdc_box_config.json
 
 .sfdx
 .DS_Store
+.code-workspace
