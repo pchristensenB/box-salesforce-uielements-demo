@@ -24,12 +24,17 @@ This sample is designed to give developers a head start in setting up a Salesfor
 5. In VS Code, use the cmd+shift+p shortcut and select SFDX: Authorize Org
    (if you are having issues with the CLI not being found when using VS Code, uninstall the Salesforce extensions and CLI from VS Code and start from step#2)
 6. Confirm you've successfully authorized your org by listing orgs and their associated status:
+
 CLI:
 ```
 sfdx force:org:list
 ```
+
 VS CODE:
+```
 cmd+shift+p: SFDX: Display Org Details for Default Org
+```
+
 6. List the installed packaged for your org:
 ```
 sfdx force:package:installed:list -u <username@domain.com>
