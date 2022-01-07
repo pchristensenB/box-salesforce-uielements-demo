@@ -1,4 +1,4 @@
-trigger opportunityTrigger on Opportunity (after insert) {
+trigger OpportunityTrigger on Opportunity (after insert) {
 boolean isFirstRun = true;
     for(Opportunity insertedOpportunity: Trigger.new) {
         if(isFirstRun) {

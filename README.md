@@ -72,7 +72,7 @@ Next you need to create a Box JWT application using this guide: https://develope
 
 Once you have downloaded the json config file with your private key run the below command from the scripts directory
 
-MAC: ./parse_box_config.py /path/to/your/config/json/file
+Mac: ./parse_box_config.py /path/to/your/config/json/file
 
 Windows: python parse_box_config.py /path/to/your/config/json/file
 
