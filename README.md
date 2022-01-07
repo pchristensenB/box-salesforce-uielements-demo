@@ -4,38 +4,39 @@ This sample is designed to give developers a head start in setting up a Salesfor
 ## Pre-Requisites
 ## Salesforce Setup
 
-If you are working with other developers in a shared environment you can do the first two steps - if you are on your own developer instance you can skip to step 3
 
-1. Setup your Salesforce DX environment: https://trailhead.salesforce.com/en/content/learn/projects/quick-start-salesforce-dx/set-up-your-salesforce-dx-environment
-2. Enable Dev Hub in Salesforce. https://help.salesforce.com/s/articleView?id=sf.sfdx_setup_enable_devhub.htm&type=5
-3. Install and Configure the Box for Salesforce Managed Package: https://community.box.com/t5/How-to-Guides-for-Integrations/Installing-and-Configuring-Box-For-Salesforce/ta-p/180). If you are on a new Salesforce Dev instance this will require you to setup a TrailHead account so just follow the steps. 
+1. Get a free developer Salesforce Org. https://developer.salesforce.com/signup
+2. Install and Configure the Box for Salesforce Managed Package: https://community.box.com/t5/How-to-Guides-for-Integrations/Installing-and-Configuring-Box-For-Salesforce/ta-p/180). If you are on a new Salesforce Dev instance this will require you to setup a TrailHead account so just follow the steps. 
     > Note: Dont forget to add the Box VisualForce components to each of the record type layouts.
 
-4. (Optional) Install the Box Salesforce SDK Unmanaged Package:
+3. (Optional) Install the Box Salesforce SDK Unmanaged Package:
     
     * Production/Developer Org: https://cloud.box.com/Box-Apex-SDK
     * Sandbox Org: https://cloud.box.com/Box-Apex-SDK-Sandbox
 
-5. Enable Digital Experiences in Salesforce. Go to Setup. Quick find: Digital Experiences->Settings to enable. You may be prompted to provide a custom domain name. This is required for the Box App user integration!
+4. Enable Digital Experiences in Salesforce. Go to Setup. Quick find: Digital Experiences->Settings to enable. You may be prompted to provide a custom domain name. This is required for the Box App user integration!
 
 ## VS Code setup
-1. Clone this github repo.
-2. Install Salesforce CLI: https://developer.salesforce.com/tools/sfdxcli
+1. Install Salesforce CLI: https://developer.salesforce.com/tools/sfdxcli
 2. Setup VS Code: https://trailhead.salesforce.com/content/learn/projects/quick-start-lightning-web-components/set-up-visual-studio-code
-3. Open the source from this repo in VS Code by adding the folder to your workspace.
-4. In VS Code, use the cmd+shift+p shortcut and select SFDX: Authorize Org
+3. Clone this github repo.
+4. Open the source from this repo in VS Code by adding the folder to your workspace.
+5. In VS Code, use the cmd+shift+p shortcut and select SFDX: Authorize Org
    (if you are having issues with the CLI not being found when using VS Code, uninstall the Salesforce extensions and CLI from VS Code and start from step#2)
-5. Confirm you've successfully authorized your org by listing orgs and their associated status:
+6. Confirm you've successfully authorized your org by listing orgs and their associated status:
+CLI:
 ```
 sfdx force:org:list
 ```
+VS CODE:
+cmd+shift+p: SFDX: Display Org Details for Default Org
 6. List the installed packaged for your org:
 ```
 sfdx force:package:installed:list -u <username@domain.com>
 ```
 Locate the Box for Salesforce package and copy the PACKAGE ID and VERSION into a new dependencies json element of the sfdx-project.json located at the root project directory.
 
-It should looks something like this (at time of writing 3.75 was the latest version of the Salesforce integration package)
+It should looks something like this (at time of writing 3.75 was the latest version of the Salesforce integration package). Only add the SDK if you installed above. 
 ```
 {
   "packageDirectories": [
@@ -90,14 +91,9 @@ You can right click the "force-app" folder and select "SFDX: Deploy source to Or
 
 ![Deploy](/images/23-deploy.png)
 
-Or use the CLI as given below
+Or use the CLI as given below from the root of the project.
 ```
 sfdx force:source:deploy -p force-app -u username@company.com
-```
-
-Push to Scratch Org:
-```
-sfdx force:source:push
 ```
 
 This will deploy the code to your Salesforce org and it will be ready to use. Any errors in your code will prevent the deployment from completing successfully.
