@@ -35,36 +35,7 @@ VS CODE:
 cmd+shift+p: SFDX: Display Org Details for Default Org
 ```
 
-6. List the installed packaged for your org:
-```
-sfdx force:package:installed:list -u <username@domain.com>
-```
-Locate the Box for Salesforce package and copy the PACKAGE ID and VERSION into a new dependencies json element of the sfdx-project.json located at the root project directory.
 
-It should looks something like this (at time of writing 3.75 was the latest version of the Salesforce integration package). Only add the SDK if you installed above. 
-```
-{
-  "packageDirectories": [
-    {
-      "path": "force-app",
-      "default": true
-    }
-  ],
-  "namespace": "",
-  "sfdcLoginUrl": "https://login.salesforce.com",
-  "sourceApiVersion": "45.0",
-  "dependencies": [
-    { 
-      "package" : "033700000004yvWAAQ",
-      "versionNumber": "3.75.0.7"
-    },
-    { 
-      "package" : "0334P000000kKiUQAU",
-      "versionNumber": "2.12.0.1"
-    }
-  ]
-}
-```
 ## Box Application setup
 
 Next you need to create a Box JWT application using this guide: https://developer.box.com/guides/authentication/jwt/jwt-setup/
