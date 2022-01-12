@@ -62,7 +62,7 @@ String clientSecret = '';
 
 ## Deploying the app
 
-More detail on what is in the app - see [APP DETAILS](app-details.md) - if you already have triggers and other custom code in your org please check against this list to see if you will run into any conflicts.
+More detail on what is in the app - see [APP DETAILS](app-details.md) - if you already have triggers and other custom code in your org please check against this list to see if you will run into any conflicts. You can remove the account and opportunity triggers if you already have these
 
 Push to Developer/Production Org:
 You can right click the "force-app" folder and select "SFDX: Deploy source to Org"
@@ -75,11 +75,30 @@ sfdx force:source:deploy -p force-app -u username@company.com
 ```
 
 This will deploy the code to your Salesforce org and it will be ready to use. Any errors in your code will prevent the deployment from completing successfully.
-
+(if you get an error about 'isPortalEnabled' please make sure you have done step#4 of the Salesforce Setup)
 
 
 ## Setting up Box UI Elements with Community
 Now you can build your community site and use the Box UI Elements in your Builder. For this sample there are four seperate elements exposed as Custom Lightning Components. Please note that by default the access to the Box folders is via the Service Account created in the JWT application step. Please add this service account to the folders you want to access in the community. 
+
+To login to your community with your standard salesforce user enable this setting in the Community Workspaces->Administration
+![Login setting](/images/25-login.png)
+
+You also need to add the site of your community to the CORS exceptions in the Box application configuration and the URLs used by the builder. There are three sites you need to add
+
+For the builder:
+- https://your-sf-commnity-sub-domain.builder.salesforce-communities.com
+- https://your-sf-communiy-sub-domain.livepreview.salesforce-communities.com
+
+For when you have published your site. Open the digital experiences page in Salesforce and you should see URL(s) there
+![Preview Box Content Explorer](/images/24-dt.png)
+
+Add the URLs from above to the CORS Domains to your Box JWT App
+
+![Preview Box Content Explorer](/images/10-box-cors-configuration.png)
+
+
+
 
 ![Preview Box Content Explorer](/images/12-components.png)
 
@@ -100,19 +119,6 @@ The Box Preview component can take a document ID at design time and display the 
 ![Box Preview](/images/16-preview.png)
 
 
-
-Please note that the first time you load the UI element it will likely fail with a CORS error. You need to add the site of your community to the CORS exceptions in the Box application configuration and the URLs used by the builder. There are three sites you need to add
-
-For the builder:
-- https://your-sfdx-sub-domain.builder.salesforce-communities.com
-- https://your-sfdx-sub-domain.livepreview.salesforce-communities.com
-
-For when you have published your site. Open the digital experiences page in Salesforce and you should see URL(s) there
-![Preview Box Content Explorer](/images/24-dt.png)
-
-Add the URLs from above to the CORS Domains to your Box JWT App
-
-![Preview Box Content Explorer](/images/10-box-cors-configuration.png)
 
 
 

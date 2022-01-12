@@ -33,7 +33,7 @@ def parseBoxJsonSettings(boxConfigPath):
 def convertCryptoKey(passphrase):
     passIn = 'pass:' + passphrase
     results = Popen(['openssl', 'pkcs8', '-topk8', '-nocrypt', '-in', 'tempKey.txt', '-outform', 'PEM', '-passin', passIn], stdout=PIPE)
-    newKey = results.communicate()[0]
+    newKey = results.communicate()[0].decode('UTF-8')
     print('Found new private key: {}'.format(newKey))
     return newKey
 
