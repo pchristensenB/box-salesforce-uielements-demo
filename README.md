@@ -87,8 +87,8 @@ To login to your community with your standard salesforce user enable this settin
 You also need to add the site of your community to the CORS exceptions in the Box application configuration and the URLs used by the builder. There are three sites you need to add
 
 For the builder:
-- https://your-sf-commnity-sub-domain.builder.salesforce-communities.com
-- https://your-sf-communiy-sub-domain.livepreview.salesforce-communities.com
+- https://your-sf-community-sub-domain.builder.salesforce-communities.com
+- https://your-sf-community-sub-domain.livepreview.salesforce-communities.com
 
 For when you have published your site. Open the digital experiences page in Salesforce and you should see URL(s) there
 ![Preview Box Content Explorer](/images/24-dt.png)
