@@ -79,26 +79,25 @@ This will deploy the code to your Salesforce org and it will be ready to use. An
 
 
 ## Setting up Box UI Elements with Community
-Now you can build your community site and use the Box UI Elements in your Builder. For this sample there are four seperate elements exposed as Custom Lightning Components. Please note that by default the access to the Box folders is via the Service Account created in the JWT application step. Please add this service account to the folders you want to access in the community. 
+Go to Digital Experiences and create a new site.
 
-To login to your community with your standard salesforce user enable this setting in the Community Workspaces->Administration
+To enable login to your community with your standard salesforce user enable this setting in the Community Workspaces-> Administration
 ![Login setting](/images/25-login.png)
 
-You also need to add the site of your community to the CORS exceptions in the Box application configuration and the URLs used by the builder. There are three sites you need to add
+You also need to add the host of your community to the CORS exceptions in your Box JWT application configuration. There are three hosts you need to add
 
 For the builder:
 - https://your-sf-community-sub-domain.builder.salesforce-communities.com
 - https://your-sf-community-sub-domain.livepreview.salesforce-communities.com
 
-For when you have published your site. Open the digital experiences page in Salesforce and you should see URL(s) there
+For when you have published your site. Open the digital experiences page in Salesforce and you should see host there
 ![Preview Box Content Explorer](/images/24-dt.png)
 
-Add the URLs from above to the CORS Domains to your Box JWT App
+Add the hosts from above to the CORS Domains to your Box JWT App
 
 ![Preview Box Content Explorer](/images/10-box-cors-configuration.png)
 
-
-
+Now you can build your community site and use the Box UI Elements in your site. For this sample there are four seperate elements exposed as Custom Aura Lightning Components. Please note that by default the access to the Box folders is via the Service Account created in the JWT application step. Please add this service account to the folders you want to access in the community. 
 
 ![Preview Box Content Explorer](/images/12-components.png)
 
@@ -110,7 +109,7 @@ The Box Content Explorer Standalone component takes a folder ID at design time a
 
 ![Preview Box Content Explorer](/images/14-standalone.png)
 
-The Box Content Uploader component can take a folder Id at design time and display an upload UI component for the given folder. This can be included anywhere in your site
+The Box Content Uploader component can take a folder ID at design time and display an upload UI component for the given folder. This can be included anywhere in your site
 
 ![Preview Box Content Explorer](/images/15-uploader.png)
 
