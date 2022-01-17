@@ -1,5 +1,5 @@
 # Box Salesforce Communities demo with UI Elements
-This sample is designed to give developers a head start in setting up a Salesforce Community that can use Box UI Elements to integrate with Box Content Services.
+This sample is designed to give developers a head start in setting up a Salesforce Community that can use Box UI Elements to integrate with Box Content Services. 
 
 ## Pre-Requisites
 ## Salesforce Setup
@@ -47,7 +47,7 @@ Mac: ./parse_box_config.py /path/to/your/config/json/file
 
 Windows: python parse_box_config.py /path/to/your/config/json/file
 
-(if you don't have 'openssl' installed you can check this article https://stackoverflow.com/questions/50625283/how-to-install-openssl-in-windows-10)
+(if you don't have 'openssl' installed you will get an error about the system not being able to find a file or program. You can check this article https://stackoverflow.com/questions/50625283/how-to-install-openssl-in-windows-10)
 
 This should output a correctly formatted private key in a file 'sfdc_box_config.json' in the scripts directory
 
@@ -62,7 +62,7 @@ String clientSecret = '';
 
 ## Deploying the app
 
-More detail on what is in the app - see [APP DETAILS](app-details.md) - if you already have triggers and other custom code in your org please check against this list to see if you will run into any conflicts. You can remove the account and opportunity triggers if you already have these
+More detail on what is in the app - see [APP DETAILS](app-details.md) - if you already have triggers and other custom code in your org please check against this list to see if you will run into any conflicts. You can remove the account and opportunity triggers if you already have these. They are included as examples of how to auto create account and opportunity folders for the Box and Salesforce integration
 
 Push to Developer/Production Org:
 You can right click the "force-app" folder and select "SFDX: Deploy source to Org"

@@ -25,10 +25,23 @@ public with sharing class BoxAppUserHandler {
         String responseBody = BoxApiRequest.getBoxResourceResponseBody(response, 'BoxUser.createEnterpriseUser');
         BoxUser.Info boxAppUserInfo = new BoxUser.Info(responseBody);
         System.debug('Created App User with name: ' + boxAppUserInfo.name + ' and id: ' + boxAppUserInfo.id);
-        //Now add a secure folder for the user with the user name in 'Secure Document Exchange'
-        BoxFolder folder = new BoxFolder(api,'151444700983');
+        
+        //READ THIS FOR SETTING UP APP USER ACCESS TO FOLDER
+        //Here you need to create/select a folder that the JWT Service Account has access to.
+        //This next part will add a new folder in this folder with the name of your user and set a collaboration with view path
+        //Then you can use the same folder as the 'Standalone Box Content explorer' and see differnet content based on user
+        BoxFolder folder = new BoxFolder(api,'FOLDER ID HERE');
         BoxFolder.Info newFolder = folder.createFolder(name);
         collaborateWithCanViewPath(api,newFolder.id,boxAppUserInfo.id,'viewer',false);
+
+        //The next part adds the app user to the account Box Folder
+        List<User> users = [select id,contactId from user where id=:userRecordID LIMIT 1];
+        Contact con = [select id,accountId from contact where id =:users[0].contactId limit 1];
+        box__FRUP__c frup = [SELECT box__Folder_ID__c, box__Record_ID__c FROM box__FRUP__c WHERE box__Record_ID__c = :con.accountId LIMIT 1];
+        String accountFolderId = frup.box__Folder_ID__c;
+        BoxFolder folder = new BoxFolder(api,accountFolderId);
+        BoxFolder.Info newFolder = folder.createFolder('External Collaboration');
+        collaborateWithCanViewPath(api,newFolder.id,boxAppUserInfo.id,'viewer uploader',false);
     }
  
  
