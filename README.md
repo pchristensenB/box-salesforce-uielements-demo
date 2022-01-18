@@ -107,18 +107,19 @@ The Box Content Explorer component is related to a specific Salesforce record an
 
 The Box Content Explorer Standalone component takes a folder ID at design time and will show the contents of this folder or folder '0' if nothing is given. This can be included anywhere in your site
 
-![Preview Box Content Explorer](/images/14-standalone.png)
+<img src="/images/14-standalone.png" width="75%" height="75%">
+
 
 The Box Content Uploader component can take a folder ID at design time and display an upload UI component for the given folder. This can be included anywhere in your site
 
-![Preview Box Content Explorer](/images/15-uploader.png)
+<img src="/images/15-uploader.png" width="75%" height="75%">
 
 The Box Preview component can take a document ID at design time and display the preview of the document. This can be included anywhere in your site
 
 <img src="/images/16-preview.png" width="75%" height="75%">
 
 
-Next you can configure your Salesforce site to demo how app users could work [APP USERS](appuser.md) 
+Next you can configure your Salesforce site to demo how app users could work. See [App User Setup](appuser.md) 
 
 
 
