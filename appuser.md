@@ -11,7 +11,7 @@ In Salesforce:
     - Name the new profile 'Box Demo Community User' 
     - Open the profile, scroll down to Enabled Apex classes and add the classes related to UI Elements
     
-    ![APEX Classes](/images/26-apexclasses.png)
+    <img src="/images/26-apexclasses.png" width="50%" height="50%">
 
 2. Goto the administration of your Community Site
     - Go to Feature Settings->Digital Experiences->All Sites-> Workspaces (for your site)
