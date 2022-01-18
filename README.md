@@ -67,7 +67,7 @@ More detail on what is in the app - see [APP DETAILS](app-details.md) - if you a
 Push to Developer/Production Org:
 You can right click the "force-app" folder and select "SFDX: Deploy source to Org"
 
-![Deploy](/images/23-deploy.png)
+<img src="/images/23-deplay.png" width="75%" height="75%">
 
 Or use the CLI as given below from the root of the project.
 ```
@@ -82,7 +82,7 @@ This will deploy the code to your Salesforce org and it will be ready to use. An
 Go to Digital Experiences and create a new site.
 
 To enable login to your community with your standard salesforce user enable this setting in the Community Workspaces-> Administration
-![Login setting](/images/25-login.png)
+<img src="/images/25-login.png" width="75%" height="75%">
 
 You also need to add the host of your community to the CORS exceptions in your Box JWT application configuration. There are three hosts you need to add
 
@@ -91,7 +91,7 @@ For the builder:
 - https://your-sf-sub-domain.livepreview.salesforce-communities.com
 
 For when you have published your site. Open the digital experiences page in Salesforce and you should see host there
-![Preview Box Content Explorer](/images/24-dt.png)
+<img src="/images/24-dt.png" width="75%" height="75%">
 
 Add the hosts from above to the CORS Domains to your Box JWT App
 
