@@ -90,7 +90,8 @@ For the builder:
 - https://your-sf-sub-domain.builder.salesforce-communities.com
 - https://your-sf-sub-domain.livepreview.salesforce-communities.com
 
-For when you have published your site. Open the digital experiences page in Salesforce and you should see host there
+For when you have published your site. Open the digital experiences page in Salesforce and you should see host in the list
+
 <img src="/images/24-dt.png" width="75%" height="75%">
 
 Add the hosts from above to the CORS Domains to your Box JWT App
