@@ -18,7 +18,7 @@ trigger ContactUserCreation on Contact (After insert) {
             //CHANGE NAME TO THE PROFILE NAME YOU HAVE SETUP IN SALESFORCE 
             String profileName='Box Demo Community User';
 
-            
+
             Id profileId = [select id from profile where name=:profileName limit 1][0].id;
             User myNewUser = new User(
                                 alias = con.firstName, 
@@ -26,8 +26,8 @@ trigger ContactUserCreation on Contact (After insert) {
                                 emailencodingkey = 'UTF-8', 
                                 firstname = con.firstName, 
                                 lastname = con.lastname, 
-                                languagelocalekey = 'en_GB', 
-                                localesidkey = 'en_GB', 
+                                languagelocalekey = 'en_US', 
+                                localesidkey = 'en_US', 
                                 contactId = con.Id,
                                 timezonesidkey = 'Europe/London', 
                                 username = con.email,

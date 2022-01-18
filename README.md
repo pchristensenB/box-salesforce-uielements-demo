@@ -117,7 +117,7 @@ The Box Preview component can take a document ID at design time and display the 
 
 ![Box Preview](/images/16-preview.png)
 
-
+Next you can configure your Salesforce site to demo how app users could work [APP USERS](appuser.md) 
 
 
 
