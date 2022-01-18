@@ -95,15 +95,16 @@ For when you have published your site. Open the digital experiences page in Sale
 
 Add the hosts from above to the CORS Domains to your Box JWT App
 
-![Preview Box Content Explorer](/images/10-box-cors-configuration.png)
+<img src="/images/10-box-cors-configuration.png" width="75%" height="75%">
+
 
 Now you can build your community site and use the Box UI Elements in your site. For this sample there are four seperate elements exposed as Custom Aura Lightning Components. Please note that by default the access to the Box folders is via the Service Account created in the JWT application step. Please add this service account to the folders you want to access in the community. 
 
-![Preview Box Content Explorer](/images/12-components.png)
+<img src="/images/12-components.png" width="75%" height="75%">
 
 The Box Content Explorer component is related to a specific Salesforce record and will show the Box folder related to a record. To work this needs to be included on a record detail page
 
-![Preview Box Content Explorer](/images/13-record.png)
+<img src="/images/13-record.png" width="75%" height="75%">
 
 The Box Content Explorer Standalone component takes a folder ID at design time and will show the contents of this folder or folder '0' if nothing is given. This can be included anywhere in your site
 
