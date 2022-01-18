@@ -82,6 +82,7 @@ This will deploy the code to your Salesforce org and it will be ready to use. An
 Go to Digital Experiences and create a new site.
 
 To enable login to your community with your standard salesforce user enable this setting in the Community Workspaces-> Administration
+
 <img src="/images/25-login.png" width="75%" height="75%">
 
 You also need to add the host of your community to the CORS exceptions in your Box JWT application configuration. There are three hosts you need to add
@@ -101,7 +102,7 @@ Add the hosts from above to the CORS Domains to your Box JWT App
 
 Now you can build your community site and use the Box UI Elements in your site. For this sample there are four seperate elements exposed as Custom Aura Lightning Components. Please note that by default the access to the Box folders is via the Service Account created in the JWT application step. Please add this service account to the folders you want to access in the community. 
 
-<img src="/images/12-components.png" width="75%" height="75%">
+<img src="/images/12-components.png" width="50%" height="50%">
 
 The Box Content Explorer component is related to a specific Salesforce record and will show the Box folder related to a record. To work this needs to be included on a record detail page
 

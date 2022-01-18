@@ -32,6 +32,8 @@ The force app you have installed has a number of components that can be used to 
     - Opportunity trigger. Creates a Box folder automatically when a new opportunity is created and moves under the account associated. This trigger will only work if the account trigger is enabled.
     - App user trigger. Creates a Box app user when a new portal user is registered. See [APP USERS](appuser.md) for more details on this as it requires more setup. 
     - Contact trigger. Creates a Portal user when a new contact is created. This will invoke the App user trigger.
+
+    (The reason there are two separate triggers is tha the app user demo can also work with self-registration)
   
   The triggers are set to "Inactive" by default. To use then, set them to "Active" in the trigger-meta.xml file for each trigger
 

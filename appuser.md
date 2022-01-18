@@ -8,7 +8,9 @@ In Salesforce:
 1. Enable a custom profile for your Community users
     - Go to Setup->Users->Profiles
     - Find 'Customer Community User' and click 'Clone'
+
         <img src="/images/28-clone.png" width="50%" height="50%">
+        
     - Name the new profile 'Box Demo Community User' 
     - Open the profile, scroll down to Enabled Apex classes and add the classes related to UI Elements
     
