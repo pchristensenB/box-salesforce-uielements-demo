@@ -115,7 +115,8 @@ The Box Content Uploader component can take a folder ID at design time and displ
 
 The Box Preview component can take a document ID at design time and display the preview of the document. This can be included anywhere in your site
 
-![Box Preview](/images/16-preview.png)
+    <img src="/images/16-preview.png" width="50%" height="50%">
+
 
 Next you can configure your Salesforce site to demo how app users could work [APP USERS](appuser.md) 
 
