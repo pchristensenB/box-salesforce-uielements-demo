@@ -67,7 +67,7 @@ More detail on what is in the app - see [APP DETAILS](app-details.md) - if you a
 Push to Developer/Production Org:
 You can right click the "force-app" folder and select "SFDX: Deploy source to Org"
 
-<img src="/images/23-deplay.png" width="75%" height="75%">
+<img src="/images/23-deploy.png" width="75%" height="75%">
 
 Or use the CLI as given below from the root of the project.
 ```
@@ -111,7 +111,7 @@ The Box Content Explorer Standalone component takes a folder ID at design time a
 <img src="/images/14-standalone.png" width="75%" height="75%">
 
 
-The Box Content Uploader component can take a folder ID at design time and display an upload UI component for the given folder. This can be included anywhere in your site
+The Box Content Uploader component can take a folder ID at design time and display an upload UI component for the given folder. This can be included anywhere in your site. 
 
 <img src="/images/15-uploader.png" width="75%" height="75%">
 
