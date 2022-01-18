@@ -67,7 +67,7 @@ More detail on what is in the app - see [APP DETAILS](app-details.md) - if you a
 Push to Developer/Production Org:
 You can right click the "force-app" folder and select "SFDX: Deploy source to Org"
 
-<img src="/images/23-deploy.png" width="75%" height="75%">
+<img src="/images/23-deploy.png" width="50%" height="50%">
 
 Or use the CLI as given below from the root of the project.
 ```
