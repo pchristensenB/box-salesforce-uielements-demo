@@ -17,6 +17,8 @@ In Salesforce:
     - Go to Feature Settings->Digital Experiences->All Sites-> Workspaces (for your site)
     - Go to Administration->Members and add 'Box Demo Community User' to selected profiles
 
+         <img src="/images/27-membersite.png" width="50%" height="50%">
+
 In VS Code
 
 1. Enable the ContactUserCreation and AppUserCreation triggers
