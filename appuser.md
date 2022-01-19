@@ -44,14 +44,14 @@ To demonstrate
 
     Contact created
     
-    <img src="/images/31-contact.png" width="50%" height="50%">
+    <img src="/images/31-contact.png" width="75%" height="75%">
 
     Salesforce Community User created
 
-    <img src="/images/32-sfuser.png" width="50%" height="50%">
+    <img src="/images/32-sfuser.png" width="75%" height="75%">
 
     Box App user created
 
-    <img src="/images/33-appuser.png" width="50%" height="50%">
+    <img src="/images/33-appuser.png" width="75%" height="75%">
 
 2. An email will be sent to the registered email address for you to confirm the user. Once confirmed, the user can login to the Community Site and interact with content via both the record based Box Content Explorer and the standalone Box Content Explorer.
