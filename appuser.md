@@ -1,4 +1,4 @@
-# About app users
+# Enable app users on your Salesforce Community demo
 The Salesforce Community demo can be setup to work with app users. In this demo we use the contact object on an account to create a Salesforce portal user and a Box App user. 
 
 The process for enabling this process in this demo is as follows :
@@ -10,7 +10,7 @@ In Salesforce:
     - Find 'Customer Community User' and click 'Clone'
 
         <img src="/images/28-clone.png" width="50%" height="50%">
-        
+
     - Name the new profile 'Box Demo Community User' 
     - Open the profile, scroll down to Enabled Apex classes and add the classes related to UI Elements
     

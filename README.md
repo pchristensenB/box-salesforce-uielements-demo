@@ -62,7 +62,7 @@ String clientSecret = '';
 
 ## Deploying the app
 
-More detail on what is in the app - see [APP DETAILS](app-details.md) - if you already have triggers and other custom code in your org please check against this list to see if you will run into any conflicts. You can remove the account and opportunity triggers if you already have these. They are included as examples of how to auto create account and opportunity folders for the Box and Salesforce integration
+More detail on what is in the app - see [App details](app-details.md) - if you already have triggers and other custom code in your org please check against this list to see if you will run into any conflicts. You can remove the account and opportunity triggers if you already have these. They are included as examples of how to auto create account and opportunity folders for the Box and Salesforce integration
 
 Push to Developer/Production Org:
 You can right click the "force-app" folder and select "SFDX: Deploy source to Org"
@@ -121,6 +121,9 @@ The Box Preview component can take a document ID at design time and display the 
 
 <img src="/images/16-preview.png" width="75%" height="75%">
 
+This video gives a quick walkthrough of how the a demo site can be created in 10 minutes.
+
+[Site Setip](site setup video here) 
 
 Next you can configure your Salesforce site to demo how app users could work. See [App User Setup](appuser.md) 
 
