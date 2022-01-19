@@ -27,7 +27,7 @@ In VS Code
 1. Enable the ContactUserCreation and AppUserCreation triggers
     - Open the .trigger-meta.xml for each trigger and set status to Active
 2. Edit the Apex class 'BoxAppUserHandler'. 
-    - Read the description (find 'READ THIS FOR SETTING UP APP USER ACCESS TO FOLDER') for instructions on how to setup the stand alone folder
+    - Read the description (find 'READ THIS FOR SETTING UP APP USER ACCESS TO FOLDER') for instructions on how to setup the stand alone folder. This folder will be the root for app user specific folders allowing you to create several and still segregate content between them.
 
     <img src="/images/29-appuserapex.png" width="50%" height="50%">
 
@@ -50,8 +50,16 @@ To demonstrate
 
     <img src="/images/32-sfuser.png" width="75%" height="75%">
 
-    Box App user created
+    Box App user created with 'external_app_user_id' set to the ID of the Salesforce User
 
     <img src="/images/33-appuser.png" width="75%" height="75%">
 
 2. An email will be sent to the registered email address for you to confirm the user. Once confirmed, the user can login to the Community Site and interact with content via both the record based Box Content Explorer and the standalone Box Content Explorer.
+
+    Logged in as App User Isaac Asimov
+
+    <img src="/images/34-ia.png" width="50%" height="50%">
+
+    Logged in as App User Dan Simmons
+
+    <img src="/images/35-ds.png" width="50%" height="50%">
