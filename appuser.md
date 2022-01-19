@@ -16,8 +16,8 @@ In Salesforce:
     
         <img src="/images/26-apexclasses.png" width="50%" height="50%">
 
-2. Goto the administration of your Community Site
-    - Go to Feature Settings->Digital Experiences->All Sites-> Workspaces (for your site)
+2. Add the profile to your Community Site
+    - Go to Setyp->Feature Settings->Digital Experiences->All Sites-> Workspaces (for your site)
     - Go to Administration->Members and add 'Box Demo Community User' to selected profiles
 
          <img src="/images/27-memberssite.png" width="50%" height="50%">
@@ -26,11 +26,13 @@ In VS Code
 
 1. Enable the ContactUserCreation and AppUserCreation triggers
     - Open the .trigger-meta.xml for each trigger and set status to Active
-2. Edit the Apex class 'BoxAppUserHandler'. Read the description (find 'READ THIS FOR SETTING UP APP USER ACCESS TO FOLDER') for instructions on how to setup the stand alone folder
+2. Edit the Apex class 'BoxAppUserHandler'. 
+    - Read the description (find 'READ THIS FOR SETTING UP APP USER ACCESS TO FOLDER') for instructions on how to setup the stand alone folder
 
     <img src="/images/29-appuserapex.png" width="50%" height="50%">
 
-3. Edit the 'BoxContentExplorerController' and 'BoxContentExplorerStandaloneController'. Find 'UNCOMMENT FOR USING APP USER' and uncomment the following line. This will enforce the components to use an app user token rather than a service account token.
+3. Edit the 'BoxContentExplorerController' and 'BoxContentExplorerStandaloneController'. 
+    - Find 'UNCOMMENT FOR USING APP USER' and uncomment the following line. This will enforce the components to use an app user token rather than a service account token.
 
     <img src="/images/30-token.png" width="50%" height="50%">
 
