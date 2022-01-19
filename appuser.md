@@ -6,7 +6,7 @@ The process for enabling this process in this demo is as follows :
 In Salesforce:
 
 1. Enable a custom profile for your Community users
-    - Go to Setup->Users->Profiles
+    - Go to Setup-> Users-> Profiles
     - Find 'Customer Community User' and click 'Clone'
 
         <img src="/images/28-clone.png" width="50%" height="50%">
@@ -17,8 +17,8 @@ In Salesforce:
         <img src="/images/26-apexclasses.png" width="50%" height="50%">
 
 2. Add the profile to your Community Site
-    - Go to Setyp->Feature Settings->Digital Experiences->All Sites-> Workspaces (for your site)
-    - Go to Administration->Members and add 'Box Demo Community User' to selected profiles
+    - Go to Setup-> Feature Settings-> Digital Experiences-> All Sites-> Workspaces (for your site)
+    - Go to Administration-> Members and add 'Box Demo Community User' to selected profiles
 
          <img src="/images/27-memberssite.png" width="50%" height="50%">
 
@@ -41,4 +41,17 @@ After making the changes, deploy your project
 To demonstrate
 
 1. Create a new contact for an account that has a Box Folder associated - add first name, last name and email address (use an email address you can access). This will create a Salesforce Portal user and an app user in Box and collaborate this user on the account folder in Box.
+
+    Contact created
+    
+    <img src="/images/31-contact.png" width="50%" height="50%">
+
+    Salesforce Community User created
+
+    <img src="/images/32-sfuser.png" width="50%" height="50%">
+
+    Box App user created
+
+    <img src="/images/33-appuser.png" width="50%" height="50%">
+
 2. An email will be sent to the registered email address for you to confirm the user. Once confirmed, the user can login to the Community Site and interact with content via both the record based Box Content Explorer and the standalone Box Content Explorer.
