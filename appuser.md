@@ -62,4 +62,4 @@ To demonstrate
 
     Logged in as App User Dan Simmons
 
-    <img src="/images/35-ds.png" width="50%" height="50%">
+    <img src="/images/35-dsi.png" width="50%" height="50%">
