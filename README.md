@@ -1,7 +1,6 @@
 # Box Salesforce Communities demo with UI Elements
 This sample is designed to give developers a head start in setting up a Salesforce Community that can use Box UI Elements to integrate with Box Content Services. 
 
-## Pre-Requisites
 ## Salesforce Setup
 
 
@@ -123,7 +122,7 @@ The Box Preview component can take a document ID at design time and display the 
 
 This video gives a quick walkthrough of how the a demo site can be created in 10 minutes.
 
-[Site Setip](site setup video here) 
+[Site Setup Video](https://cloud.box.com/s/rh8tum82lqhhhil5z9wr9v51b2nqrrde) 
 
 Next you can configure your Salesforce site to demo how app users could work. See [App User Setup](appuser.md) 
 

@@ -5,6 +5,6 @@
         styles="{!$Resource.explorer + '/13.0.0/en-US/explorer.css'}"
         scripts="{!$Resource.explorer + '/13.0.0/en-US/explorer.js'}" 
         afterScriptsLoaded="{!c.doInit}"/>
-        <div aura:id="explorer-container1"> Peter</div>
+        <div aura:id="explorer-container1"> Box UI Elements Demo</div>
 
 </aura:component>	

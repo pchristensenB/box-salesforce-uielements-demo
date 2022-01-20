@@ -27,21 +27,33 @@ public with sharing class BoxAppUserHandler {
         System.debug('Created App User with name: ' + boxAppUserInfo.name + ' and id: ' + boxAppUserInfo.id);
         
         //READ THIS FOR SETTING UP APP USER ACCESS TO FOLDER
-        //Here you need to create/select a folder that the JWT Service Account has access to.
+
+        //Here you need to create/select a Box folder that the JWT Service Account has access to.
         //This next part will add a new folder in this folder with the name of your user and set a collaboration with view path
-        //Then you can use the same folder as the 'Standalone Box Content explorer' and see differnet content based on user
+        //Then you can use the same folder as the 'Standalone Box Content explorer' and see different content based on user context
         BoxFolder folder = new BoxFolder(api,'FOLDER ID HERE');
         BoxFolder.Info newFolder = folder.createFolder(name);
-        collaborateWithCanViewPath(api,newFolder.id,boxAppUserInfo.id,'viewer',false);
+        collaborateWithCanViewPath(api,newFolder.id,boxAppUserInfo.id,'viewer uploader',false);
 
-        //The next part adds the app user to the account Box Folder
+        //The next part creates a new folder called 'External Collaboration' under the account folder and
+        // adds the app user to the account Box Folder with a can
         List<User> users = [select id,contactId from user where id=:userRecordID LIMIT 1];
         Contact con = [select id,accountId from contact where id =:users[0].contactId limit 1];
         box__FRUP__c frup = [SELECT box__Folder_ID__c, box__Record_ID__c FROM box__FRUP__c WHERE box__Record_ID__c = :con.accountId LIMIT 1];
         String accountFolderId = frup.box__Folder_ID__c;
-        BoxFolder folder = new BoxFolder(api,accountFolderId);
-        BoxFolder.Info newFolder = folder.createFolder('External Collaboration');
-        collaborateWithCanViewPath(api,newFolder.id,boxAppUserInfo.id,'viewer uploader',false);
+        BoxFolder accFolder = new BoxFolder(api,accountFolderId);
+        BoxFolder.Info newExternalFolder = accFolder.createFolder('External Collaboration');
+        String newFolderId = newExternalFolder.id;
+        if(newFolderId == null) {
+            list<BoxItem.Info> children = accFolder.getChildren();
+                for (BoxItem.Info itemInfo : children) {
+                    if (itemInfo.type == 'folder' && itemInfo.name.equals('External Collaboration')) {
+                        newFolderId=itemInfo.id;
+                        break;
+                    } 
+                }
+        }
+        collaborateWithCanViewPath(api,newFolderId,boxAppUserInfo.id,'viewer uploader',false);
     }
  
  

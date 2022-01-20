@@ -32,10 +32,10 @@
                         isFolderUploadEnabled:true,
                     },
                     staticPath: previewResource,
-                        previewLibraryVersion: '2.12.0',
+                    previewLibraryVersion: '2.12.0',
                     contentPreviewProps: {
                         
-                        showAnnotations: true,
+                        showAnnotations: false,
                         contentSidebarProps: {
                             detailsSidebarProps: {
                                 hasNotices: true,
