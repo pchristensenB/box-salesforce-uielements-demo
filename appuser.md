@@ -52,10 +52,18 @@ To demonstrate
 
 2. An email will be sent to the registered email address for you to confirm the user. Once confirmed, the user can login to the Community Site and interact with content via both the record based Box Content Explorer and the standalone Box Content Explorer.
 
-    Logged in as App User Isaac Asimov
+    Logged in as App User Isaac Asimov opening the standalone Box Content Explorer
 
     <img src="/images/34-ia.png" width="50%" height="50%">
 
-    Logged in as App User Dan Simmons
+    Logged in as App User Dan Simmons opening the standalone Box Content Explorer
 
     <img src="/images/35-dsi.png" width="50%" height="50%">
+
+    Both can login and see the 'External Collaboration' folder on the account they are assigned but not any other (internal) documents
+
+    <img src="/images/36-acc.png" width="50%" height="50%">
+
+    View from the account owner in Salesforce
+
+    <img src="/images/37-sfacc.png" width="50%" height="50%">
