@@ -27,14 +27,10 @@ In VS Code
 1. Enable the ContactUserCreation and AppUserCreation triggers
     - Open the .trigger-meta.xml for each trigger and set status to Active
 2. Edit the Apex class 'BoxAppUserHandler'. 
-    - Read the description (find 'READ THIS FOR SETTING UP APP USER ACCESS TO FOLDER') for instructions on how to setup the stand alone folder. This folder will be the root for app user specific folders allowing you to create several and still segregate content between them.
+    - Read the description (find 'READ THIS FOR SETTING UP APP USER ACCESS TO FOLDER') for instructions on how to setup the stand alone folder. This must be the same folder you used to configure the standalone Box Content Explorer in the previous section. This folder will be the root for app user specific folders allowing you to create several app users and show that they can only access their own data. 
 
     <img src="/images/29-appuserapex.png" width="50%" height="50%">
 
-3. Edit the 'BoxContentExplorerController' and 'BoxContentExplorerStandaloneController'. 
-    - Find 'UNCOMMENT FOR USING APP USER' and uncomment the following line. This will enforce the components to use an app user token rather than a service account token.
-
-    <img src="/images/30-token.png" width="50%" height="50%">
 
 After making the changes, deploy your project
 
