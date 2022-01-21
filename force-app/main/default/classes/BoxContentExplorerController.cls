@@ -20,9 +20,9 @@ public without sharing class BoxContentExplorerController {
        
         // Get the service account access token
         String accessToken = box.accessToken;
-  		
-        //UNCOMMENT FOR USING APP USER
-        //accessToken = box.getTokenForUser(accessToken,Id.valueOf(UserInfo.getUserId()));
+        //This will try to fetch a token for the logged in user if there is a mapped app user. If not it
+        //will return the service account token
+        accessToken = box.getTokenForUser(accessToken,Id.valueOf(UserInfo.getUserId()));
 
         // Create a resource for the folder
         String resource = 'https://api.box.com/2.0/folders/' + folderId;

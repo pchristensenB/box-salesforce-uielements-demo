@@ -44,11 +44,11 @@ Once you have downloaded the json config file with your private key run the belo
 
 Mac: ./parse_box_config.py /path/to/your/config/json/file
 
-Windows: python parse_box_config.py /path/to/your/config/json/file
+Windows: python parse_box_config.py \path\to\your\config\json/file
 
-(if you don't have 'openssl' installed you will get an error about the system not being able to find a file or program. You can check this article https://stackoverflow.com/questions/50625283/how-to-install-openssl-in-windows-10)
+(if you don't have 'openssl' installed you will get an error about the system not being able to find a file or program. You can check this article https://stackoverflow.com/questions/50625283/how-to-install-openssl-in-windows-10 on how to install it)
 
-This should output a correctly formatted private key in a file 'sfdc_box_config.json' in the scripts directory
+The command should output a correctly formatted private key in a file 'sfdc_box_config.json' in the scripts directory
 
 Next, you need to copy the values from the json file into the BoxConnection Apex class
 ```
@@ -99,7 +99,7 @@ Add the hosts from above to the CORS Domains to your Box JWT App
 <img src="/images/10-box-cors-configuration.png" width="75%" height="75%">
 
 
-Now you can build your community site and use the Box UI Elements in your site. For this sample there are four seperate elements exposed as Custom Aura Lightning Components. Please note that by default the access to the Box folders is via the Service Account created in the JWT application step. Please add this service account to the folders you want to access in the community. 
+Now you can build your community site and use the Box UI Elements in your site. For this sample there are four seperate elements exposed as Custom Aura Lightning Components. Please note that by default the access to the Box folders is via the Service Account created in the JWT application step. Please add this service account as a collaborator to the folders you want to access in the community. 
 
 <img src="/images/12-components.png" width="50%" height="50%">
 
@@ -107,7 +107,7 @@ The Box Content Explorer component is related to a specific Salesforce record an
 
 <img src="/images/13-record.png" width="75%" height="75%">
 
-The Box Content Explorer Standalone component takes a folder ID at design time and will show the contents of this folder or folder '0' if nothing is given. This can be included anywhere in your site
+The Box Content Explorer Standalone component takes a folder ID at design time and will show the contents of this folder or folder '0' if nothing is given. This can be included anywhere in your site. 
 
 <img src="/images/14-standalone.png" width="75%" height="75%">
 
@@ -120,7 +120,7 @@ The Box Preview component can take a document ID at design time and display the 
 
 <img src="/images/16-preview.png" width="75%" height="75%">
 
-This video gives a quick walkthrough of how the a demo site can be created in 10 minutes.
+This video gives a quick walkthrough of how the a demo site can be created in less than 10 minutes.
 
 [Site Setup Video](https://cloud.box.com/s/mfo1mictqtxj18eazhtylfhds3v3mmln) 
 
