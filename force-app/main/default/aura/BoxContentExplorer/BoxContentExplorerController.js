@@ -52,35 +52,7 @@
                         }
                     }
                 });
-                explorer.addListener('upload', function(file){
-                    console.log('upload complete')
-                    let action = component.get("c.sendEmail");
-                    action.setParams({
-                        'recordId': recordId
-                    });
-                    action.setCallback(this, function(response) {
-                        var state = response.getState();
-                        console.log("state is " + state)
-                        if (state === "SUCCESS") {
-                            var storeResponse = response.getReturnValue();
-                        }
-                        else if (state === "ERROR") {
-                            var errors = response.getError();
-                            if (errors) {
-                                if (errors[0] && errors[0].message) {
-                                    console.log("Error message: " + 
-                                             errors[0].message);
-                                }
-                            } else {
-                                console.log("Unknown error");
-                            }
-                        }
-            
-             
-                    });
-                    $A.enqueueAction(action);
-
-                });
+               
             }
             else {
                 var elemDiv = document.createElement('div');

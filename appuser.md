@@ -60,7 +60,7 @@ To demonstrate
 
     <img src="/images/35-dsi.png" width="50%" height="50%">
 
-    Both can login and see the 'External Collaboration' folder on the account they are assigned but not any other (internal) documents
+    Both can access the account they are assigned to and only see the 'External Collaboration' folder as this is the only one they have been collaborated on
 
     <img src="/images/36-acc.png" width="50%" height="50%">
 
