@@ -3,11 +3,11 @@ public with sharing class BoxConnection {
     public static final String HEADER_APPLICATION_ENCODED = 'application/x-www-form-urlencoded';
     public static final String TOKEN_URL_STRING = 'https://api.box.com/oauth2/token';
     public static final String USER_URL_STRING = 'https://api.box.com/2.0/users';
- 	private static String publicKeyId = '';
-   	private static String privateKey = '';
- 	private static String enterpriseId = '';
- 	private static String clientId = '';
- 	private static String clientSecret = '';
+ 	private  String publicKeyId = '';
+   	private  String privateKey = '';
+ 	private  String enterpriseId = '';
+ 	private  String clientId = '';
+ 	private  String clientSecret = '';
     private static BoxConnection instance = null;
     public BoxPlatformApiConnection api { get; private set; }
     public String accessToken { get; private set; }
@@ -17,12 +17,12 @@ public with sharing class BoxConnection {
     private BoxConnection() {
 
 
-             String publicKeyId = '';
-            String privateKey = '';
-            String enterpriseId = '';
-            String clientId = '';
-            String clientSecret = '';
-
+            
+            //publicKeyId = '';
+            // privateKey = '';//
+             //enterpriseId = '';
+             //clientId = '';
+             //clientSecret = '';
 
 		    preferences.setPublicKeyId(publicKeyId);
 		    preferences.setPrivateKey(privateKey);
@@ -71,7 +71,7 @@ public with sharing class BoxConnection {
         return downscopedToken;    
     }
 
-    public static String getTokenForUser(String parentToken,Id extUserId) {
+    public String getTokenForUser(String parentToken,Id extUserId) {
         String userToken;
         
         // Construct the JWT URL parameters
@@ -92,17 +92,21 @@ public with sharing class BoxConnection {
             System.debug(authResponse.getValue('entries'));
             JSONParser parser = JSON.createParser(authResponse.getJsonString ());
 			list<String> childEntries = BoxJsonObject.parseJsonObjectArray(authResponse.getValue('entries'));
-    		for (String entry : childEntries) {
-    			BoxGenericJsonObject entryObject = new BoxGenericJsonObject(entry);
-                userId = entryObject.getValue('id');
-                break;
+            if(childEntries.size()>0) {
+                for (String entry : childEntries) {
+                    BoxGenericJsonObject entryObject = new BoxGenericJsonObject(entry);
+                    userId = entryObject.getValue('id');
+                    break;
+                }
+            }else {
+                return parentToken;
             }
     		
         } else {
             System.debug('BoxPlatformApiConnection unable to authenticate to generate tokens');
+            return parentToken;
         }
         BoxPlatformApiConnection userApi = new BoxPlatformApiConnection(userId, BoxPlatform.PlatformEntityType.USER, clientId, clientSecret, preferences);
-        system.debug(userApi.getAccessToken());
         return userApi.getAccessToken();    
     }
 }
