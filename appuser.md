@@ -36,7 +36,7 @@ After making the changes, deploy your project
 
 To demonstrate
 
-1. Create a new contact for an account that has a Box Folder associated - add first name, last name and email address (use an email address you can access). This will create a Salesforce Portal user and an app user in Box and collaborate this user on the account folder in Box.
+1. Create a new contact for an account that has a Box Folder associated - add first name, last name and email address (use an email address you can access). This will create a Salesforce Portal user and an app user in Box and collaborate this user on the account folder in Box. (This will only work if the contact has an account associated!)
 
     Contact created
     
